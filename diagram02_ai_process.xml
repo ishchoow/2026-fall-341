@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0">
+  <diagram name="Page-1" id="sales-order-diagram">
+    <mxGraphModel dx="944" dy="509" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="40" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="act1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Take the customer order" vertex="1">
+          <mxGeometry height="60" width="120" x="120" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="act2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Run the credit check" vertex="1">
+          <mxGeometry height="60" width="120" x="280" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="gw" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="Credit approved?" vertex="1">
+          <mxGeometry height="80" width="80" x="440" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ship" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Ship the goods" vertex="1">
+          <mxGeometry height="60" width="120" x="580" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="record" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Record the order" vertex="1">
+          <mxGeometry height="60" width="120" x="740" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="end1" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=4;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="900" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="reject" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Reject the order" vertex="1">
+          <mxGeometry height="60" width="120" x="580" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="end2" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=4;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="740" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="start" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="act1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="act1" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="act2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="act2" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gw">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_approved" edge="1" parent="1" source="gw" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ship" value="approved">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="ship" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="record">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="record" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="end1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_rejected" edge="1" parent="1" source="gw" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="reject" value="rejected">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="reject" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="end2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
